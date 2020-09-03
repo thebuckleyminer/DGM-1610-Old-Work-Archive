@@ -11,3 +11,4 @@ Added another line. (Practice)
 8/30/2020 6:17pv 86F and Sunny
 8/31/2020 10:25 AM 65F outside and cloudy
 9/01/2020 It is a cool morning and looks like a beautiful day
+9/03/2020 Today's forcast has a high of 90 and a low of 56
