@@ -12,3 +12,5 @@ Added another line. (Practice)
 8/31/2020 10:25 AM 65F outside and cloudy
 9/01/2020 It is a cool morning and looks like a beautiful day
 9/03/2020 Today's forcast has a high of 90 and a low of 56
+9/04/2020 Today is not to hot outside and quite enjoyable
+9/05/2020 It is a lot warmer today, but I am sad I am studying outside and not getting any sun even on the weekend.
