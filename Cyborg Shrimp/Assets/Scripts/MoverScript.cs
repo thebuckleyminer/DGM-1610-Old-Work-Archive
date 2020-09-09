@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿// Christopher Wilkinson following Anthony Romrell in class. Sep/2020
 using UnityEngine;
 
 public class MoverScript : MonoBehaviour
 {
-    public float x, y, z;
-    public float speed = 3f;
-    
-    //public float speed = 5f;
-    //public int score = 100;
+    public float speed = 5f;
+    public int score = 100;
 
-    private void Start()
-    {
-        Debug.Log(message:"Hello World!");
+    private void Update()//update will run as fast as it can and hit all the frames it can
+    { //*Time.deltaTime for the same framerate
+        var vInput = Time.deltaTime*speed * Input.GetAxis("Vertical"); //What this does is use the up and down arrows
+        var hInput = Time.deltaTime*speed * Input.GetAxis("Horizontal");//Gets the Horizontal movement -left and right arrow keys + A and D + joystick
+        transform.Translate(hInput,vInput,0.1f);
     }
 
-    private void Update()
+    public void MoveUp()
     {
-        x = speed*Input.GetAxis("Horizontal")*Time.deltaTime;
-        y = speed*Input.GetAxis("Vertical")*Time.deltaTime;
-        transform.Translate(x,y,z);
-        //var vInput = speed *Time.deltaTime* Input.GetAxis("Vertical");
-        //var hInput= speed *Time.deltaTime* Input.GetAxis("Horizontal");
-        //transform.Translate(hInput,vInput,0);
+        transform.Translate(0,speed,0);
+        print("Up.");
+    }
+    public void MoveDown()
+    {
+        transform.Translate(0,-speed,0);
+        print("Down.");
+    }
+
+    public void MoveRight()
+    {
+        transform.Translate(speed,0,0);
+    }
+
+    public void MoveLeft()
+    {
+        transform.Translate(-speed, 0, 0);
     }
 }
 
