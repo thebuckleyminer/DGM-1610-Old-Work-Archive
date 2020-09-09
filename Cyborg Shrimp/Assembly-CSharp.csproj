@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScore.cs" />
      <Compile Include="Assets\Scripts\CharacterMover.cs" />
+     <Compile Include="Assets\Scripts\WriteGameVariablesScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Tower of Glass/Desktop/GitHub Files/DGM 1610 Fall 2020 Repo/Cyborg Shrimp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
