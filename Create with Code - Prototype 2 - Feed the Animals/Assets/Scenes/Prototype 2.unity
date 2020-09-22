@@ -770,29 +770,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
---- !u!1 &1823298689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1823298688}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1823298690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823298689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ddce85bf376474fb71ae17ade794ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horosontalInput: 0
-  speed: 10
-  xAxisRange: 15
-  projectilePrefab: {fileID: 4521396625297837563, guid: 547f7aa47ccc8df44bd02719d9853cd4,
-    type: 3}
 --- !u!1001 &1826632882
 PrefabInstance:
   m_ObjectHideFlags: 0

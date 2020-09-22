@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 9500000}
+  - component: {fileID: 1823298690}
   m_Layer: 0
   m_Name: SimpleFarmer_White
   m_TagString: Untagged
@@ -55,6 +56,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1823298690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ddce85bf376474fb71ae17ade794ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horosontalInput: 0
+  speed: 10
+  xAxisRange: 15
+  projectilePrefab: {fileID: 4521396625297837563, guid: 547f7aa47ccc8df44bd02719d9853cd4,
+    type: 3}
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
