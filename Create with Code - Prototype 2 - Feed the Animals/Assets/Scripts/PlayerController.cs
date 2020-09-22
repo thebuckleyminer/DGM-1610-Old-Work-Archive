@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horosontalInput;
-
     public float speed = 10.0f;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +15,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < -10)
+        {
+            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+        }
         horosontalInput = Input.GetAxis("Horizontal");
         transform.Translate(speed * Time.deltaTime * horosontalInput * Vector3.right);
         
