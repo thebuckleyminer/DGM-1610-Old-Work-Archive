@@ -294,10 +294,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 2133945743}
-  - {fileID: 1088945224}
-  - {fileID: 1592646249}
-  - {fileID: 447396158}
+  - {fileID: 1405336760207883056, guid: e91e97a0157608740882f675f0d94d54, type: 3}
+  - {fileID: 6181572151346530397, guid: b74eef2ba80f4574fa92b089a3a04f7b, type: 3}
+  - {fileID: 8991705727364368530, guid: 951794a329a26b247b9212ad0a9ace87, type: 3}
+  - {fileID: 1069103688822006559, guid: 3a7e1d7b06ce5064c8346affb8ab0713, type: 3}
+  animalIndex: 0
 --- !u!1 &425805626
 GameObject:
   m_ObjectHideFlags: 0
