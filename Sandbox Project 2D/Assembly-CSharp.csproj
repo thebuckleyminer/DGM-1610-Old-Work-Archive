@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MoverScript.cs" />
+     <Compile Include="Assets\Scripts\PowerUp.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Tower of Glass/Desktop/GitHub Files/DGM 1610 Fall 2020 Repo/Sandbox Project 2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
