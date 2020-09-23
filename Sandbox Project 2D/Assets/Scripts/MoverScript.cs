@@ -23,6 +23,21 @@ public class MoverScript : MonoBehaviour
 
     public void Up()
     {
-        print("Up.");
+        transform.Translate(0, speed, 0);
+    }
+
+    public void Down()
+    {
+        transform.Translate(0, -speed, 0);
+    }
+
+    public void Left()
+    {
+        transform.Translate(-speed, 0, 0);
+    }
+
+    public void Right()
+    {
+        transform.Translate(speed, 0, 0);
     }
 }
