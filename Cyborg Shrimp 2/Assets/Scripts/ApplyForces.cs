@@ -3,7 +3,7 @@
 public class ApplyForces : MonoBehaviour
 {
     public Rigidbody rBody;
-    public float force = 30;
+    public float force = 100f;
     
 
     void OnMouseDown()
@@ -11,9 +11,3 @@ public class ApplyForces : MonoBehaviour
         rBody.AddForce(0,force,0);
     }
 
-
-    void Update()
-    {
-        //rBody.AddForce(0,force,0); 
-    }
-}
