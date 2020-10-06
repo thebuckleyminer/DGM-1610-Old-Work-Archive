@@ -6,6 +6,7 @@ using UnityEngine.Analytics;
 
 public class PlayerController : MonoBehaviour
 {
+    public ParticleSystem explosionParticle; 
     private Rigidbody playerRb;
     public float jumpForce = 10;
     public float gravityModifier;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
         } else if (collision.gameObject.CompareTag("Obstacle"))
         {
+            explosionParticle.Play();
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             Debug.Log("Game Over");
