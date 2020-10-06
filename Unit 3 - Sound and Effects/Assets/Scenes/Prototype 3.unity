@@ -499,6 +499,8 @@ MonoBehaviour:
   isOnGround: 1
   gameOver: 0
   dirtParticle: {fileID: 991576009}
+  jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
+  crashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
 --- !u!65 &769792373
 BoxCollider:
   m_ObjectHideFlags: 0

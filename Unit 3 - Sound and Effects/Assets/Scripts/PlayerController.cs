@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public  bool gameOver;
     private Animator playerAnim;
     public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
 
     // Start is called before the first frame update
     void Start()
