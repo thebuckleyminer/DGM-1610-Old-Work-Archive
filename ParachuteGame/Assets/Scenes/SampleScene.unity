@@ -315,6 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  rotationBound: 45
+  rotationBound: 30
   wilkinsonEulerAngleTracker: 0
-  angleMoved: 1
+  angleMoved: 0.5
+  horizontalSpeed: 10
+  horizontalInputAngle: 0

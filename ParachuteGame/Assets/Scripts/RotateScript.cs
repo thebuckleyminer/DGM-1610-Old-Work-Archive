@@ -4,48 +4,59 @@ public class RotateScript : MonoBehaviour
 {
     public float horizontalInput;
     //This will be the limit of the swing of the parachuter can pivot
-    public float rotationBound = 45.0f;
+    public float rotationBound = 30.0f;
     public float wilkinsonEulerAngleTracker = 0.0f;
-    public float angleMoved = 1.0f;
+    public float angleMoved = 0.50f;
+    public float horizontalSpeed = 10.0f;
+    public float horizontalInputAngle;
     
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+        
 
-        if (horizontalInput != 0 && horizontalInput > 0)
+        transform.Translate(horizontalInput * horizontalSpeed * Time.deltaTime, 0, 0, Space.World);
+
+        
+        if (horizontalInput != 0)
         {
-            if (wilkinsonEulerAngleTracker < rotationBound)
+            horizontalInputAngle = 45 * horizontalInput;
+            if (horizontalInput > 0)
             {
-                wilkinsonEulerAngleTracker += angleMoved;
-                transform.Rotate(0,0,angleMoved);
+                if (wilkinsonEulerAngleTracker < rotationBound)
+                {
+                    wilkinsonEulerAngleTracker += angleMoved;
+                    transform.Rotate(0,0,angleMoved);
+                }
+            }
+            if (horizontalInput < 0)
+            {
+                if (wilkinsonEulerAngleTracker > -rotationBound)
+                {
+                    wilkinsonEulerAngleTracker -= angleMoved;
+                    transform.Rotate(0,0,-angleMoved);
+                }
             }
         }
         
-        if (horizontalInput != 0 && horizontalInput < 0)
-        {
-            if (wilkinsonEulerAngleTracker > -rotationBound)
-            {
-                wilkinsonEulerAngleTracker -= angleMoved;
-                transform.Rotate(0,0,-angleMoved);
-            }
-        }
         
         if (horizontalInput == 0)
         {
+            horizontalInputAngle = 0.0f;
             if (wilkinsonEulerAngleTracker > 0)
             {
-                wilkinsonEulerAngleTracker -= angleMoved;
-                transform.Rotate(0,0,-angleMoved);
+                wilkinsonEulerAngleTracker -= angleMoved/2;
+                transform.Rotate(0,0,-angleMoved/2);
             }
             if (wilkinsonEulerAngleTracker < 0)
             {
-                wilkinsonEulerAngleTracker += angleMoved;
-                transform.Rotate(0,0,+angleMoved);
+                wilkinsonEulerAngleTracker += angleMoved/2;
+                transform.Rotate(0,0,+angleMoved/2);
             }
         }
 
-        //transform.position.x += horizontalInput * Time.deltaTime;
-        transform.Translate(horizontalInput * Time.deltaTime, 0, 0, Space.World);
+        
+        
 
 
 
