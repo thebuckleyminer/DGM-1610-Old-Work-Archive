@@ -1,25 +1,96 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RotateScript : MonoBehaviour
 {
-    public float horosontalInput;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float horizontalInput;
+    //This will be the limit of the swing of the parachuter can pivot
+    public float rotationBound = 45.0f;
+    public float wilkinsonEulerAngleTracker = 0.0f;
+    public float angleMoved = 1.0f;
+    
     void Update()
     {
-        horosontalInput = Input.GetAxis("Horizontal");
-        
-        transform.Rotate(0, 0, 45 * horosontalInput);
-        Debug.Log(horosontalInput);
-        
+        horizontalInput = Input.GetAxis("Horizontal");
 
+        if (horizontalInput != 0 && horizontalInput > 0)
+        {
+            if (wilkinsonEulerAngleTracker < 45.0f)
+            {
+                wilkinsonEulerAngleTracker += angleMoved;
+                transform.Rotate(0,0,angleMoved);
+            }
+        }
+        
+        if (horizontalInput != 0 && horizontalInput < 0)
+        {
+            if (wilkinsonEulerAngleTracker > -45.0f)
+            {
+                wilkinsonEulerAngleTracker -= angleMoved;
+                transform.Rotate(0,0,-angleMoved);
+            }
+        }
+        
+        if (horizontalInput == 0)
+        {
+            if (wilkinsonEulerAngleTracker > 0)
+            {
+                wilkinsonEulerAngleTracker -= angleMoved;
+                transform.Rotate(0,0,-angleMoved);
+            }
+            if (wilkinsonEulerAngleTracker < 0)
+            {
+                wilkinsonEulerAngleTracker += angleMoved;
+                transform.Rotate(0,0,+angleMoved);
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //if (horizontalInput != 0 || transform.rotation.z != 0)
+        //{
+        //    transform.Rotate(0, 0, 10 * Time.deltaTime);
+        //}
+        
+        
+        
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //Debug.Log(transform.rotation.z);
+        //transform.rotation.z = horizontalInput;
+        //transform.Rotate(0, 0, rotationBound * horizontalInput);
+        //Debug.Log(horizontalInput);
+        
+        //if transform.
     }
 }
+
