@@ -14,7 +14,7 @@ public class RotateScript : MonoBehaviour
 
         if (horizontalInput != 0 && horizontalInput > 0)
         {
-            if (wilkinsonEulerAngleTracker < 45.0f)
+            if (wilkinsonEulerAngleTracker < rotationBound)
             {
                 wilkinsonEulerAngleTracker += angleMoved;
                 transform.Rotate(0,0,angleMoved);
@@ -23,7 +23,7 @@ public class RotateScript : MonoBehaviour
         
         if (horizontalInput != 0 && horizontalInput < 0)
         {
-            if (wilkinsonEulerAngleTracker > -45.0f)
+            if (wilkinsonEulerAngleTracker > -rotationBound)
             {
                 wilkinsonEulerAngleTracker -= angleMoved;
                 transform.Rotate(0,0,-angleMoved);
@@ -43,53 +43,56 @@ public class RotateScript : MonoBehaviour
                 transform.Rotate(0,0,+angleMoved);
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+        //transform.position.x += horizontalInput * Time.deltaTime;
+        transform.Translate(horizontalInput * Time.deltaTime, 0, 0, Space.World);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //if (horizontalInput != 0 || transform.rotation.z != 0)
         //{
         //    transform.Rotate(0, 0, 10 * Time.deltaTime);
         //}
-        
-        
-        
+
+
+
         //horizontalInput = Input.GetAxis("Horizontal");
         //Debug.Log(transform.rotation.z);
         //transform.rotation.z = horizontalInput;
         //transform.Rotate(0, 0, rotationBound * horizontalInput);
         //Debug.Log(horizontalInput);
-        
+
         //if transform.
     }
 }
